@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import Header from './Header';
+import Footer from './Footer';
+import Createnotes from './Createnotes';
+import Note from './Note';
+const App = () => {
+  const [additem,setadditem]=useState([])
 
-function App() {
+  const addevents=(note)=>{
+    // console.log("I am clicked")
+    setadditem((preval)=>{
+      return [...preval,note]
+    })
+  }
+  // console.log(additem)
+
+  const deletNote=(id)=>{
+    setadditem((old)=>{
+      return old.filter((cur,inde)=>{
+        return inde !== id;
+      })
+    })
+
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Header />
+    <Createnotes passnote={addevents} />
+    {additem.map((val,index)=>{
+      return <Note 
+      key={index}
+      id={index}  
+      title={val.title}
+      content={val.content}
+      deletItem={deletNote}  />
+    
+    })}
+    <Footer />
+    </>
+  )
 }
 
 export default App;
