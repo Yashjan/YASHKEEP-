@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/YASHKEEP-/static/css/main.4c50c072.css",
+    "main.js": "/YASHKEEP-/static/js/main.35cfd979.js",
+    "static/media/1615478819899 (1).jpg": "/YASHKEEP-/static/media/1615478819899 (1).e940f09b95135464728c.jpg",
+    "index.html": "/YASHKEEP-/index.html",
+    "main.4c50c072.css.map": "/YASHKEEP-/static/css/main.4c50c072.css.map",
+    "main.35cfd979.js.map": "/YASHKEEP-/static/js/main.35cfd979.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4c50c072.css",
+    "static/js/main.35cfd979.js"
+  ]
+}
